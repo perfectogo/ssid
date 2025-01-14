@@ -23,7 +23,7 @@ The `SequenceGenerator` is a Go package designed to generate unique, sequential 
 
 ### Install the Package
 ```bash
-go get github.com/your-repo/ssid
+go get -u github.com/perfectogo/ssid
 ```
 
 ---
@@ -35,7 +35,7 @@ Define the prefix and sequence configuration for the IDs you want to generate:
 
 ```go
 import (
-	"github.com/your-repo/ssid"
+	"github.com/perfectogo/ssid"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -51,7 +51,7 @@ func main() {
 	// Define sequence configurations
 	config := ssid.PrefixConfig{
 		"PL": {Length: 8, SeqName: "pl_sequence"},
-		"REF": {Length: 10, SeqName: "ref_sequence"},
+		"REF": {Length: 6, SeqName: "ref_sequence"},
 	}
 
 	// Create a new SequenceGenerator instance
